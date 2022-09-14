@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div>
+      <!--where the numbers and the result will be displayed-->
+      <header id="result"></header>
+      <!-- the numbers and the operation of the calculator will be in the table-->
+      <table>
+        <tr class="calculator1">
+          <td onclick="digit('*0.01')">%</td>
+          <td onclick="digit('(')">(</td>
+          <td onclick="digit(')')">)</td>
+          <td onclick="digit('/')">/</td>
+        </tr>
+        <tr class="calculator1">
+          <td onclick="digit('1')">1</td>
+          <td onclick="digit('2')">2</td>
+          <td onclick="digit('3')">3</td>
+          <td onclick="digit('+')">+</td>
+        </tr>
+        <tr class="calculator1">
+          <td onclick="digit('4')">4</td>
+          <td onclick="digit('5')">5</td>
+          <td onclick="digit('6')">6</td>
+          <td onclick="digit('-')">-</td>
+        </tr>
+        <tr class="calculator1">
+          <td onclick="digit('7')">7</td>
+          <td onclick="digit('8')">8</td>
+          <td onclick="digit('9')">9</td>
+          <td onclick="digit('*')">*</td>
+        </tr>
+        <tr class="calculator1">
+          <td onclick="digit('0')">0</td>
+          <td onclick="digit('.')">.</td>
+          <td onclick="equalsTo('=')">=</td>
+          <td onclick="refreshDis()">C</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
