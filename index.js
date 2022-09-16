@@ -1,52 +1,58 @@
-var c = "";
-var a = "";
-var dig = [];
+var one = "";
+var two = "";
+var num = [];
 var ans;
 
 //when the users clicks on equals to sign, the function equalsTo will be called
-
 function equalsTo() {
-  document.getElementById("result").innerHTML = "";
-  for (i = 0; i < dig.length; i++) {
-    a = a + dig[i];
+  try {
+    document.getElementById("result").innerHTML = "";
+    two += num.join("");
+
+    //the result will be displayed
+    ans = eval(two);
+    if (isNaN(ans)) throw new Error("Your calculation was not a number");
+
+    document.getElementById("result").innerHTML = ans;
+
+    num = ans.toString().split();
+  } catch (e) {
+    var three = document.getElementById("error");
+    three.className = "show";
+
+    setTimeout(function () {
+      three.className = three.className.replace("show", "");
+    }, 3000);
+
+    num = [];
+  } finally {
+    two = "";
+    one = "";
   }
-
-  //the result will be displayed
-  ans = eval(a);
-
-  document.getElementById("result").innerHTML = ans;
-
-  while (dig.length > 0) {
-    dig.pop();
-  }
-  dig.push(ans.toString());
 }
 
 //storing the digits and operators into an array through function digit
-function digit(num) {
-  dig.push(num);
+function digit(number) {
+  num.push(number);
 
-  if (dig.length != 1) {
-    c = "";
-    document.getElementById("result").innerHTML = c;
+  if (num.length != 1) {
+    one = "";
+    document.getElementById("result").innerHTML = one;
   }
 
-  for (i = 0; i < dig.length; i++) {
-    c = c + dig[i];
+  for (i = 0; i < num.length; i++) {
+    one = one + num[i];
   }
 
-  document.getElementById("result").innerHTML = c;
+  document.getElementById("result").innerHTML = one;
 }
 
 //when the user click on 'C', the function refreshDis will be called
 
-function refreshDis() {
+function refreshDisplay() {
   document.getElementById("result").innerHTML = "";
-  while (dis.length > 0) {
-    //
-    dis.pop();
-  }
 
-  c = "";
-  a = "";
+  one = "";
+  two = "";
+  num = [];
 }

@@ -9,13 +9,16 @@
     <title>Calculator</title>
   </head>
   <body>
-    <div>
+    <div id="error">Invalid number!</div>
+   <div>
       <!--where the numbers and the result will be displayed-->
-      <header id="result"></header>
+      <header id="result">
+        
+      </header>
       <!-- the numbers and the operation of the calculator will be in the table-->
       <table>
         <tr class="calculator1">
-          <td onclick="digit('*0.01')">%</td>
+          <td onclick="digit('%')">%</td>
           <td onclick="digit('(')">(</td>
           <td onclick="digit(')')">)</td>
           <td onclick="digit('/')">/</td>
@@ -42,9 +45,9 @@
           <td onclick="digit('0')">0</td>
           <td onclick="digit('.')">.</td>
           <td onclick="equalsTo('=')">=</td>
-          <td onclick="refreshDis()">C</td>
+          <td onclick="refreshDisplay()">C</td>
         </tr>
       </table>
-    </div>
+
   </body>
 </html>

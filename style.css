@@ -9,7 +9,7 @@ div {
 
 header {
   background-color: #4682b4;
-  width: 355px;
+  width: 100%;
   height: 80px;
   border-radius: 20px;
   margin: 0px;
@@ -41,4 +41,27 @@ td {
 
 td:active {
   background-color: #d3d3d3;
+}
+
+#error {
+  visibility: hidden;
+  width: 160px;
+  height: 30px;
+  padding: 16px;
+  position: absolute;
+  z-index: 1;
+  left: 53%;
+  top: 48px;
+  font-size: 20px;
+  margin-left: -125px;
+  background-color: #4682b4;
+  color: white;
+  text-align: center;
+  border-radius: 2px;
+}
+
+#error.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
